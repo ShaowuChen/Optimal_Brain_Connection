@@ -1,6 +1,7 @@
 # [Optimal Brain Connection: Towards Efficient Structural Pruning](https://arxiv.org/abs/2508.05521)
 
 ---
+<img width="827" height="655" alt="framework" src="https://github.com/user-attachments/assets/7634c62f-a1ee-4564-899f-8a1ddd2fde64" />
 
 ~~I am currently focusing on my manuscript; the code will be organized and uploaded in about 10 days.~~
 
