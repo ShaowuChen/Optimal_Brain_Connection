@@ -12,6 +12,19 @@ This repository contains the code for our paper, `Optimal Brain Connection: Towa
 
 This project is built upon [Depgraph](https://github.com/VainF/Torch-Pruning). We sincerely thank the authors for their open-source work.
 
+## Contact and Citation
+Feel free to email me at `shaowu-chen@foxmail.com`.
+
+If the code or paper helps your work, please cite our paper:
+```
+@article{chen2025optimal,
+  title={Optimal Brain Connection: Towards Efficient Structural Pruning},
+  author={Chen, Shaowu and Ma, Wei and Huang, Binhua and Wang, Qingyuan and Wang, Guoxin and Sun, Weize and Huang, Lei and John, Deepu},
+  journal={arXiv preprint arXiv:2508.05521},
+  year={2025}
+}
+```
+
 ## Contributions
 
 - **1. Jacobian Criterion (JC)**: We propose an efficient first-order criterion that takes parameter interaction into consideration for accurate importance evaluation (see `Fig.1 a`).
@@ -45,18 +58,7 @@ $$\mathcal{S}\left(\{\mathbf{w}_m|m\in\mathbb{G}_g\}\right)\triangleq
   <img src="./images/ep.png" alt="JTJ illustration" width="100%">
 </div>
 
-## Contact and Citation
-Feel free to email me at `shaowu-chen@foxmail.com`.
 
-If the code or paper helps your work, please cite our paper:
-```
-@article{chen2025optimal,
-  title={Optimal Brain Connection: Towards Efficient Structural Pruning},
-  author={Chen, Shaowu and Ma, Wei and Huang, Binhua and Wang, Qingyuan and Wang, Guoxin and Sun, Weize and Huang, Lei and John, Deepu},
-  journal={arXiv preprint arXiv:2508.05521},
-  year={2025}
-}
-```
 
 ## Code File Explanation
 ### To see our Jacobian Criterion
