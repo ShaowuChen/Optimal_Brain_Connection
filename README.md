@@ -1,17 +1,50 @@
 
 # [Optimal Brain Connection: Towards Efficient Structural Pruning](https://arxiv.org/abs/2508.05521)
 
-<div align="center">
-<img width="500"  alt="framework" src="https://github.com/user-attachments/assets/7634c62f-a1ee-4564-899f-8a1ddd2fde64" />
+<div style="text-align: center;">
+  <img src="./images/framework4.png" alt="Our OBC Framework" width="100%">
+  <p style="margin-top: 5px; font-style: italic;">Fig.1 Our OBC framework.</p>
 </div>
+
+
 
 This repository contains the code for our paper, `Optimal Brain Connection: Towards Efficient Structural Pruning`. ([Download the paper here](https://arxiv.org/abs/2508.05521)).
 
 This project is built upon [Depgraph](https://github.com/VainF/Torch-Pruning). We sincerely thank the authors for their open-source work.
 
 ## Contributions
-- **Jacobian Criterion (JC)**: We propose an efficient first-order criterion that takes parameter interaction into consideration for accurate importance evaluation (see `Fig. a`).
-- **Equivalent Pruning (EP)**: We propose an AutoEncoder-based pruning mechanism that retains the contributions of all original parameters or connections during fine-tuning to enhance performance (See `Fig. b` and `Fig. c`).
+
+- **1. Jacobian Criterion (JC)**: We propose an efficient first-order criterion that takes parameter interaction into consideration for accurate importance evaluation (see `Fig.1 a`).
+$$
+\mathcal{S}\left(\{\mathbf{w}_m|m\in\mathbb{G}_g\}\right)\triangleq 
+ \sum_{m\in \mathbb{G}_g}\mathcal{S}^{\rm (1)}(\mathbf{w}_m)\triangleq\sum_{m\in \mathbb{G}_g}\mathbf{w}_m^{\top}\left(\mathbf{J}_m^{\top}\mathbf{J}_m\right)\mathbf{w}_m
+$$
+
+<p style="margin-top: 8px; font-style: italic;">Here our JC  takes parameter interaction into consideration via the off-diagonal elemenets of the dense `J_m^T J'.  </p>
+<div style="text-align: center;">  
+<img src="./images/jc_formula.png" alt="criteria formula" width="50%">
+</div>
+
+
+<div style="text-align: center;">
+  <img src="./images/JTJ.png" alt="JTJ illustration" width="50%">
+  <p style="margin-top: 5px; font-style: italic;">JTJ of 16 filters </p>
+</div>
+
+  <p style="margin-top: 8px; font-style: italic;">Our JC outperforms several popular criteria: </p>
+<div style="text-align: center;">
+  <img src="./images/jc.png" alt="JTJ illustration" width="100%">
+</div>
+
+
+****
+
+- **2. Equivalent Pruning (EP)**: We propose an AutoEncoder-based pruning mechanism that retains the contributions of all original parameters or connections during fine-tuning to enhance performance (See `Fig.1 b` and `Fig.1 c`).
+
+<p style="margin-top: 5px; font-style: italic;">EP works very well for both JC and Depgraph:</p>
+<div style="text-align: center;">
+  <img src="./images/ep.png" alt="JTJ illustration" width="100%">
+</div>
 
 ## Contact and Citation
 Feel free to email me at `shaowu-chen@foxmail.com`.
