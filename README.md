@@ -1,8 +1,8 @@
 
 # [Optimal Brain Connection: Towards Efficient Structural Pruning](https://arxiv.org/abs/2508.05521)
 
-<div style="text-align: center;">
-  <img src="./images/framework4.png" alt="Our OBC Framework" width="100%">
+<div align="center">
+  <img src="./images/framework4.png" alt="Our OBC Framework" width="80%">
   <p style="margin-top: 5px; font-style: italic;">Fig.1 Our OBC framework.</p>
 </div>
 
@@ -15,18 +15,17 @@ This project is built upon [Depgraph](https://github.com/VainF/Torch-Pruning). W
 ## Contributions
 
 - **1. Jacobian Criterion (JC)**: We propose an efficient first-order criterion that takes parameter interaction into consideration for accurate importance evaluation (see `Fig.1 a`).
-$$
-\mathcal{S}\left(\{\mathbf{w}_m|m\in\mathbb{G}_g\}\right)\triangleq 
- \sum_{m\in \mathbb{G}_g}\mathcal{S}^{\rm (1)}(\mathbf{w}_m)\triangleq\sum_{m\in \mathbb{G}_g}\mathbf{w}_m^{\top}\left(\mathbf{J}_m^{\top}\mathbf{J}_m\right)\mathbf{w}_m
-$$
+
+$$\mathcal{S}\left(\{\mathbf{w}_m|m\in\mathbb{G}_g\}\right)\triangleq 
+ \sum_{m\in \mathbb{G}_g}\mathcal{S}^{\rm (1)}(\mathbf{w}_m)\triangleq\sum_{m\in \mathbb{G}_g}\mathbf{w}_m^{\top}\left(\mathbf{J}_m^{\top}\mathbf{J}_m\right)\mathbf{w}_m$$
 
 <p style="margin-top: 8px; font-style: italic;">Here our JC  takes parameter interaction into consideration via the off-diagonal elemenets of the dense `J_m^T J'.  </p>
-<div style="text-align: center;">  
+<div align="center">
 <img src="./images/jc_formula.png" alt="criteria formula" width="50%">
 </div>
 
 
-<div style="text-align: center;">
+<div align="center">
   <img src="./images/JTJ.png" alt="JTJ illustration" width="50%">
   <p style="margin-top: 5px; font-style: italic;">JTJ of 16 filters </p>
 </div>
