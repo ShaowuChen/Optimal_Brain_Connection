@@ -131,6 +131,9 @@ $$\mathcal{S}\left(\{\mathbf{w}_m|m\in\mathbb{G}_g\}\right)\triangleq
     CUDA_VISIBLE_DEVICES=1 python benchmark_ViT.py --data_path /your/data/root --repeats 10 --N_batchs 50 --normalizer None --global_pruning
     CUDA_VISIBLE_DEVICES=2 python benchmark_ViT.py --data_path /your/data/root --repeats 10 --N_batchs 50 --normalizer None --global_pruning --bottleneck --save_prefix Bottleneck
     ```
+- `benchmark_HqClip_CIFAR100_5times.ipynb`: Compares criteria on HQ-CLIP evaluated on CIFAR-100. Just modify `DATA_ROOT` and run it using Jupyter.
+- `benchmark_HqClip_ImageNet.py`: Compares criteria on HQ-CLIP evaluated on ImageNet.  Just modify `DATA_ROOT` and conduct `python benchmark_HqClip_ImageNet.py`.
+
 
 ### To see our Equivalent Pruning or implement the main experiment
 - `main_cifar.py`: Implements pruning, our `Equivalent Pruning`, and one-shot fine-tuning for VGG-19 and ResNet-56 on the CIFAR-10/100 datasets.
