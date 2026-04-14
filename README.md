@@ -30,6 +30,7 @@ If the code or paper helps your work, please cite our paper:
 $$
 \mathcal{S}\left(\{\mathbf{w}_m|m\in\mathbb{G}_g\}\right)\triangleq 
  \sum_{m\in \mathbb{G}_g}\mathcal{S}^{\rm (1)}(\mathbf{w}_m)\triangleq\sum_{m\in \mathbb{G}_g}\mathbf{w}_m^{\top}\left(\mathbf{J}_m^{\top}\mathbf{J}_m\right)\mathbf{w}_m$$
+
   - Here our JC  takes parameter interaction within a structural components $\mathbf{w}_m$ (such as a filter) into consideration via the off-diagonal elemenets of the dense $\mathbf{J}_m^{\top}\mathbf{J}_m$:
   <div align="center">
   <img src="./images/jc_formula.png" alt="criteria formula" width="90%">
